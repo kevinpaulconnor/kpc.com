@@ -1,0 +1,98 @@
+/* remove margins, paddings, borders */
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+a:link { text-decoration: none;}
+a:visited { text-decoration: none;}
+a:hover { text-decoration: none;}
+a:active { text-decoration: none;}
+/* Attributes for everything */
+html, body {
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	text-align: center;
+	font-family: Courier New, sans serif;
+	font-size: 10pt;
+}
+.wrapper {
+	text-align: left;
+}
+/* Attributes for non-background, non-footer content*/
+.content {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+	float: left;
+}
+
+/*Wrap for background and footer*/
+.container {
+	position: absolute;
+	min-height: 100%;
+	margin: 0 auto;
+
+}
+
+/* Footer attributes */
+.footer {
+	position: relative;
+	bottom: 0px;
+	margin-top: 50px;
+	text-align: center;
+	margin: 0px auto;
+}	
+
+/* Blue horizontal line attributes */
+.bluehoriz {
+position: relative; 
+width: 100%;
+height:1px;
+line-height:1px;
+margin-top:50px;
+background-color:#99CCFF;
+z-index: 1;
+float: left;
+}
+
+/*red vertical line attributes*/
+.redvert {
+position:absolute; 
+left:150px;
+width: 1px;
+height:100%;
+line-height:1px;
+margin:0px;
+z-index:2;
+background-color:#FF9999;
+float: left;
+}
+
+/* Attributes for text left of redvert */
+.links {
+	position: relative;
+	left: 0;
+	width: 150px;
+	font-size: 20px;
+	margin-top: 26px;
+	text-align: center;
+}
+/* Attributes for text right of redvert */
+.main {
+	position: relative;;
+	right: 0;
+	font-size: 12px;
+	margin-top: 35px;
+	text-align: center;
+	z-index: 3;
+}
+
+.mainhead {
+	font-size: 30px;
+}
+
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<meta name="keywords" content="">
+<head>
+<head><title>Fav-O-Tron 3000 Dev Blog</title></head>
+<link rel="stylesheet" type="text/css" href="../style.css"/>
+</head>
+<body>
+<div class="content">
+<div class="links" style="position:absolute; top: 130px; margin-top: 0;">
+<a href="../projects.php">Projects</a>
+<div class="links">
+<a href="../links.php">Links</a> </div>
+<div class="links">
+<a href="../design.php">Design</a> </div>
+<div class="links">
+<a href="../contact.php">Contact</a> </div>
+<div class="links">
+<a href="../index.php">Home</a> </div>
+</div> <! links>
+<div class="main" style="left: 150px; margin-top: 116px; position: absolute;">
+<mainhead>Fave-O-Tron 3000 Stage 1 Dev-Blog</mainhead>
+<div class="main">
+<b>1/28/09</b>. Downloaded favoritedata.txt from the Metafilter InfoDump (Currently down
+ after the recent SQL Injection attack on the site). This has all the information
+ that I need for the Fav-O-Tron: Every post or comment marked as favorite correlated with
+ with the usernumber of the favoriter and the usernumber of the favoritee. I need
+ to do some text processing with regular expressions to filter other data from this file
+ that I don't need. After that, I can SSH-tunnel into my MySQL instance on my ISP and
+ use the LOAD DATA INFILE MySQL command to get the data into my MySQL database. 
+ I know very little about text processing and I need to do some research. I'm hoping
+ that I can use the unix grep and pipe commands to strip away the text that I don't
+ need, but if I can't, I'll need to write a Perl script or something, and it's been
+ a long time since I've used Perl. At any rate, I have a freelance web design project
+ that requires my attention for the next few days. I'm hoping to get back to this
+ next week.</div>
+<div class="main" style="margin-top: 25px; text-align: left;">
+<b>1/27/09</b>. Welcome to the MetaFilter Fav-O-Tron 3000 Stage 1 Development Blog.
+ On the Metafilter community weblog, users can 'favorite' the posts and comments of other users
+ (or their own, though this is frowned upon). For example, here is the list of posts and
+ comments that I have <a href="http://www.metafilter.com/favorites/41973">favorited
+ </a>. For Fav-O-Tron Stage 1, I'll be constructing a MySQL database of each favorite, with
+  the 'favoriter' and the 'favoritee'. I'll make a web front end that takes a username
+   or usernumber, and returns a color coded list like the following, supposing that I put in
+   my own username, 'Kwine', or my own usernumber, '41973'...</div>
+<div class="main" style="margin-top: 23px;">
+<b>Kwine's Favoriteees</b><br>
+<font color=blue>John(#)</font><br>
+<font color=green>Paul(#)</font><br>
+<font color=orange>George(#)</font><br>
+<font color=red>Ringo(#)</font><br>
+<b>Kwine's Favoriters</b><br>
+<font color=blue>George(#)</font><br>
+<font color=green>John(#)</font><br>
+<font color=orange>Ringo(#)</font><br>
+<font color=red>Paul(#)</font><br></div>
+
+<div class="main" style="margin-top: 20px; text-align: left;">
+...where "Kwine's Favoritees" is a list of those who have favorited my content,
+ "Kwine's Favoriters" is a list of those whose content I have favorited, "John, Paul,
+ " et. al are other Metafilter users, "#" is the number of favorites given or received,
+ and the text color relates to that number: the bigger the number, the "warmer" the
+ color (Perhaps obviously, the actual results will often be a good deal more complicated than)
+ these examples). Stage 2 of the Fav-O-Tron 3000 will follow Stage 1, and will turn these results
+ into a cool visual map of favorite relationships. </div>
+<div class="footer" style="position: relative; margin-top: 15px; left: 0;">
+	All content &copy; Kevin Connor 2009. <a href="../index.php">Home</a>
+</div>
+ </div>	<! content>	
+
+
+<div class="redvert" style="height: 750px;"></div>
+<div class="bluehoriz" style="margin-top:150px; position: absolute;">
+	<div class="bluehoriz"></div>
+	<div class="bluehoriz"></div>
+	<div class="bluehoriz"></div>
+	<div class="bluehoriz"></div>
+	<div class="bluehoriz"></div>
+	<div class="bluehoriz"></div>
+	<div class="bluehoriz"></div>
+	<div class="bluehoriz"></div>
+	<div class="bluehoriz"></div>
+	<div class="bluehoriz"></div>
+	<div class="bluehoriz" style="margin-bottom: 0;"></div>
+	</div>
+
+	
+	
+</body>
+</html>

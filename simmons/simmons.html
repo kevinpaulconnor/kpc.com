@@ -1,0 +1,181 @@
+<html>
+<meta name="keywords" content="">
+<title>Sports Guy NFL Picks Machine</title>
+<body bgcolor=yellow>
+<table border=0; align=center>
+<p align=center><b>About:</b> Every week during the NFL season, Bill Simmons,
+(aka the Sports Guy) picks every NFL game against the point spread. kevinpaulconnor.com
+has collected crucial information about these picks (2006-2008) into a database.
+From this page, <i>you</i> can query the database to find out how he has done.<br>
+
+<!Post html form to select.php for database processing !>
+<form method="post" action="select.php">
+<tr><th><a href="year.html">Year</a></th><th><a href="week.html">Week</a></th>
+<th><a href="simmonspick.html">Simmons Pick</a></th>
+<th><a href="pickhome.html">Pick Home/Away</a></th>
+<th><a href="opponent.html">Opponent</a></th>
+<th><a href="spread.html">Spread Operator</a></th>
+<th><a href="spread.html">Spread</a></th>
+<th><a href="simmonsresult.html">Simmons Result</a></th></tr>
+<tr><td><select name="year">
+<option value="*">Any</option>
+<option value="2006">2006</option>
+<option value="2007">2007</option>
+<option value="2008">2008</option>
+</select></td>
+<td><select name="week">
+<option value="*">Any</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+</select></td>
+<td><select name="pick">
+<option value="*">Any</option>
+<option value="bears">bears</option>
+<option value="bengals">bengals</option>
+<option value="bills">bills</option>
+<option value="broncos">broncos</option>
+<option value="browns">browns</option>
+<option value="bucs">bucs</option>
+<option value="cards">cards</option>
+<option value="chargers">chargers</option>
+<option value="chiefs">chiefs</option>
+<option value="colts">colts</option>
+<option value="cowboys">cowboys</option>
+<option value="dolphins">dolphins</option>
+<option value="eagles">eagles</option>
+<option value="falcons">falcons</option>
+<option value="giants">giants</option>
+<option value="jags">jags</option>
+<option value="jets">jets</option>
+<option value="lions">lions</option>
+<option value="niners">niners</option>
+<option value="packers">packers</option>
+<option value="panthers">panthers</option>
+<option value="pats">pats</option>
+<option value="raiders">raiders</option>
+<option value="rams">rams</option>
+<option value="ravens">ravens</option>
+<option value="redskins">redskins</option>
+<option value="saints">saints</option>
+<option value="seahawks">seahawks</option>
+<option value="steelers">steelers</option>
+<option value="texans">texans</option>
+<option value="titans">titans</option>
+<option value="vikings">vikings</option>
+</select></td>
+<td><select name="home">
+<option value="*">Any</option>
+<option value="y">At Home</option>
+<option value="n">On Road</option>
+</select></td>
+<td><select name="opp">
+<option value="*">Any</option>
+<option value="bears">bears</option>
+<option value="bengals">bengals</option>
+<option value="bills">bills</option>
+<option value="broncos">broncos</option>
+<option value="browns">browns</option>
+<option value="bucs">bucs</option>
+<option value="cards">cards</option>
+<option value="chargers">chargers</option>
+<option value="chiefs">chiefs</option>
+<option value="colts">colts</option>
+<option value="cowboys">cowboys</option>
+<option value="dolphins">dolphins</option>
+<option value="eagles">eagles</option>
+<option value="falcons">falcons</option>
+<option value="giants">giants</option>
+<option value="jags">jags</option>
+<option value="jets">jets</option>
+<option value="lions">lions</option>
+<option value="niners">niners</option>
+<option value="packers">packers</option>
+<option value="panthers">panthers</option>
+<option value="pats">pats</option>
+<option value="raiders">raiders</option>
+<option value="rams">rams</option>
+<option value="ravens">ravens</option>
+<option value="redskins">redskins</option>
+<option value="saints">saints</option>
+<option value="seahawks">seahawks</option>
+<option value="steelers">steelers</option>
+<option value="texans">texans</option>
+<option value="titans">titans</option>
+<option value="vikings">vikings</option>
+</select></td>
+<td><select name="lineopr">
+<option value="*">Any</option>
+<option value="&lt;">Gave/Got fewer than</option>
+<option value="&gt;">Gave/Got more than</option>
+<option value="=">Gave/Got equal to</option>
+</select></td>
+<td><input type="text" name="line" size="3"></td>
+<td><select name="result">
+<option value="*">Any</option>
+<option value="w">Simmons won!</option>
+<option value="l">Simmons lost!</option>
+<option value="push">Simmons pushed!</option>
+</select></td></tr></table>
+<p align=center>
+"I want you to watch me query this database, watch me click this menu and choose
+an option, watch...<br>
+<input type="submit" value="Bam! Right there."><br>
+You think that wasn't a big database search?"<br></p>
+</form>
+<b>Instructions:</b> Use the drop down menus and text box to form your query and hit the button.
+For specific information about particular options, please click a menu label
+to open a new window with usage instructions. <br>
+
+<h3>Notes<h3>
+<h4>1/16/09</h4>
+<ul>
+<li>"Simmons Result" response string included a piece of the SQL query; Fixed. 
+"Week" response string was ungrammatical when combined with "Year". Fixed.
+</ul>
+<h4>1/12/09:</h4>
+<ul>
+<li>Seahawks option mapped to steelers, steelers option missing. Fixed.
+<li>Fixed database problem: 'Lines' column in db accepted ints rather
+than floats, so half-point lines were being truncated. Changed "Lines" to accept
+floats.
+</ul>
+<h4>Release: 1/10/09</h4>
+<ul>
+<li><b>Missing Picks</b>: I couldn't find Simmons picks for the following games:
+2007 week 9, 2007 week 12 weekend games, 2007 week 13 thursday games, and
+2008 week 13 weekend games, so those games are not in the database. Either these
+are no longer publicly available, or I'm dumb. If the latter, please send me
+the link and I'll add them.
+<li>There are no playoff picks in the database. I might add them in the future,
+especially if someone gives me a compelling reason.
+<li>I didn't realize when I started that Simmons started making picks before 2006.
+ When I feel like doing a lot of data entry, I'll go back and add those.
+<li>There are something like 725 entries in the database, all of which
+I entered myself. There are almost certainly a few data entry errors; if you find
+one please let me know.
+<li>I'd love to hear from you about the Picks Machine. Contact me at 
+"myfullname@thewellknownemailservicethatgoogleprovides.com"
+</ul>
+
+
+<hr>
+<footer> <p align=center>
+<i>All content &copy; Kevin Connor 2009. Isn't this an ugly yellow? </i>
+<a href="../index.html">Home</a></footer> </p>
+</body>
+</html>

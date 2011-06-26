@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<schema xmlns="http://wwww.kevinpaulconnor.com/simmons">
+<element name="year" type="integer"></element>
+<element name="week" type="integer"></element>
+<element name="pick" type="string"></element>
+<element name="home" type="string"></element>
+<element name="opp" type="string"></element>
+<element name="lineopr" type="string"></element>
+<element name="line" type="integer"></element>
+<element name="result" type="string"></element>
+</schema>
