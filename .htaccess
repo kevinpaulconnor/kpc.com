@@ -1,20 +1,9 @@
-#allows a single uri through the .htaccess password protection
-SetEnvIf Request_URI "/testing_uri$" test_uri
-
-#allows everything if its on a certain host
-SetEnvIf HOST "^staging.kevinpaulconnor.com" testing_url
-SetEnvIf HOST "^kevinpaulconnor.com" live_url
-Order Deny,Allow
-
 AuthName "Staging"
 AuthType Basic
-AuthUserFile /home/private/restrict
+AuthUserFile /home/private/restrict/.htpasswd
 AuthGroupFile /
 Require valid-user
 
-#Allow valid-user
-Deny from all
-Allow from env=test_uri
-Allow from env=testing_url
-Allow from env=live_url
-Satisfy any
+<Limit GET>
+require valid-user
+</Limit>
