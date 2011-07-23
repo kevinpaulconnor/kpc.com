@@ -1,9 +1,16 @@
-AuthName "Staging"
-AuthType Basic
-AuthUserFile /home/private/restrict/.htpasswd
-AuthGroupFile /
-Require valid-user
+#allow local machine password-free access
+#SetEnvIf HOST "^localhost" local
+#SetEnvIf HOST "^kevinpaulconnor.com" live
+#Order Deny,Allow
 
-<Limit GET>
-require valid-user
-</Limit>
+#AuthName "Staging"
+#AuthType Basic
+#AuthUserFile /home/private/restrict/.htpasswd
+#AuthGroupFile /
+
+#Satisfy any
+#Deny from all
+#Allow from localhost
+#Allow from env=live
+#Require valid-user
+
