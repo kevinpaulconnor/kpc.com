@@ -1,2 +1,14 @@
 0447.jpg
 .DS_Store
+
+blog/*
+!blog/wp-content/
+blog/wp-content/*
+!blog/wp-content/plugins/
+!blog/wp-content/themes/
+blog/wp-content/themes/*
+!blog/wp-content/themes/veryplaintxt/
+blog/wp-content/plugins/*
+!blog/wp-content/plugins/akismet
+!blog/wp-content/plugins/headspace2
+!blog/wp-content/plugins/wp-syntax
